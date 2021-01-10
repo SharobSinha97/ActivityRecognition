@@ -38,7 +38,7 @@ It is also observed that there was no "Null" value in the entire dataset.
 ### Data Visualization
 The data of the columns x acceleration, y acceleration, z acceleration was plotted individually as distribution plot. A bell curve is observed in each case which signifies the data follows normal distribution and is ready to be used for machine learning model training purpose.
 
-### Model Development
+## Model Development
 The prepared experimental dataset is split into two parts as training(80%) and testing(20%) datasets.
 Since the model is based on classification problem and predicts a discrete output of Activity Recognition(Working at Computer,Standing Up, Walking and Going up\down stairs, Standing, Walking, Going Up\Down Stairs, Walking and Talking with Someone, Talking while Standing), we have used classification algorithms namely Decision Tree, Gaussian Naïve Bayes and K-Nearest Neighbours (KNN) algorithm to build our initial model. 
 
@@ -74,11 +74,11 @@ So, we decided to add another feature column containing the average of x acceler
 After this, we fit our data to the selected KNN model ranging the value of K from 5 to 50, with intervals of 2 which resulted a smooth Error Graph and a promising training and testing accuracy.
 We finally decided to select the value of K as 29 for our final model, since the values after that subtly starts to fluctuate. The final model gives accuracy as training data: 0.817491, testing:	0.809497 which increased by 5% from the last model(where all the label classes were included) and an error rate of 0.19053
 
-### Conclusion
+## Conclusion
 This project was aimed at designing a model which would predict the 5 different activities based on the raw data. For developing this model, we applied data cleaning
 on the given dataset in order to simplify the data. After that, the unnecessary classes from the label field were removed values on the basis of how they were affecting our output.
-After that, the datasets were subdivided into training and test data and different algorithms like Logistic Regression, Decision Tree were used to determine which
-algorithm gave way to the most precise model. After applying a few algorithms on the dataset,it was observed that KNN algorithm with K value 29 gave the <b>best results as follows:
+After that, the datasets were subdivided into training and test data and different algorithms like Naive Bayes, Decision Tree, K-Nearest Neighbours were used to determine which
+algorithm gave way to the most precise model. After applying a few algorithms on the dataset,it was observed that <b>KNN algorithm with K value 29 gave the best results as follows:
   <li>Training Accuracy: 0.817491</li>
   <li>Testing Accuracy: 0.809497</li> 
 </b>
