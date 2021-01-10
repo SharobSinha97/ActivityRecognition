@@ -57,20 +57,20 @@ K-Nearest Neighbour algorithm with k value as 5 gives the best output among the 
 In the dataset it is observed that in the 'label' column there are repetative classes like,
 2: "Standing Up, Walking and Going up\down stairs" is a merged class of 3,4 and 5. 
 We have checked the value counts for each classes and decided to delete the lower count classes i.e., 5,2 and 6.
-1    608667
-7    593563
-4    357064
-3    216737
-5     51498
-2     47878
-6     47770
+<li>1    608667</li>
+<li>7    593563</li>
+<li>4    357064</li>
+<li>3    216737</li>
+<li>5     51498</li>
+<li>2     47878</li>
+<li>6     47770</li>
 Name: 4, dtype: int64
 Now, The selected classifier, the KNN model is used and the range for the value of K is taken from 15 to 50 to select the best value of K.
 Although the training and testing accuracy was promising (in most cases, training : 82%, testing : 80%) but the Error Rate was fluctuating from K value 29 to 50.
 So, we decided to add another feature column containing the average of x acceleration, y acceleration and z acceleration for each rows.
 
 After this, we fit our data to the selected KNN model ranging the value of K from 5 to 50, with intervals of 2 which resulted a smooth Error Graph and a promising training and testing accuracy.
-We finally decided to select the value of K as 29 for our final model, since the values after that subtly starts to fluctuate. The final model gives accuracy as training data: 0.817491, testing:	0.809497 which increased by 5% from the last model(where all the label classes were included) and an error rate of 0.19053
+We finally decided to select the value of K as 29 for our final model, since the values after that subtly starts to fluctuate. The final model gives accuracy as training data: 0.817491, testing:	0.809497 which increased by 5% from the last model(where all the label classes were included) and an error rate of 0.19053. This model is saved as a pickle file in the "models" folder as "final_model.sav" is the required machine learning model.
 
 ## Conclusion
 This project was aimed at designing a model which would predict the 5 different activities based on the raw data. For developing this model, we applied data cleaning
@@ -80,8 +80,9 @@ algorithm gave way to the most precise model. After applying a few algorithms on
   <li>Training Accuracy: 0.817491</li>
   <li>Testing Accuracy: 0.809497</li> 
 </b>
+Please refer to the two jupyter notebooks named as "DataAnalysis&Viz" and "ModelSelection" in the "notebooks" folder for all the data analysis, data visualization graphs and model informations.
 
 ## Instructions
-<li> Go to the root folder and open a command terminal</li>
-<li>type the command pip install -r requirement.txt </li>
+<li>Go to the root folder and open a command terminal</li>
+<li>type the command pip install -r requirement.txt(windows user only)</li>
 <li>type the command python main.py </li>
