@@ -1,7 +1,7 @@
 ## Activity Recognition from a Single Chest-Mounted Accelerometer
 
 ## Objective
-1. Create a Supervised Learning Machine Learning model that can accept raw values from a 3 DoF sensor 
+1. Create a Supervised Learning ML model that can accept raw values from a 3 DoF sensor 
 2. Classify up to 5 different(classes) activities based on the raw data. 
 3. Make sure to include a readme file justifying the various steps being performed as well as why the ML model you’re using was selected. (The readme file is mandatory for submissions to be considered.) 
 4. Submissions are to be made in the form of a GitHub repo with a requirements.txt file included. 
@@ -24,8 +24,8 @@ Data Format: CSV
 The Essential Libraries used in this project are <b>os, pickle</b> for file handling, <b>numpy and pandas</b> for data analysis, <b>matplotlib and seaborn</b> for data insight and visualization, <b>scikit-learn</b> for using machine learning models and <b>jupyter notebook</b> for documentation. Please refer to the requirement.txt file for all the version details of the libraries.
  
 ## Dataset
-### Dataset Preparation
-The collected data of 15 participants was given in fifteen .csv(comma separated value) format files respectively for the project.
+### Data Preparation
+The collected data of 15 participants were given in fifteen .csv(comma separated value) format files for the project.
 Initially, all the .csv files was kept in a folder named 'data'.
 From this 'data' folder, all the files were merged in a single pandas dataframe. The first column i.e. "sequential number" was replaced by 'filename' while generating the dataframe which was containing the name of the respective files (eg. 1.csv) of the data. This master file is also saved in a foleder named "model" as "dataset.csv".
 The merged dataset contains 1926896 rows and 5 columns.
@@ -84,5 +84,5 @@ Please refer to the two jupyter notebooks named as "DataAnalysis&Viz" and "Model
 
 ## Instructions
 <li>Go to the root folder and open a command terminal</li>
-<li>type the command pip install -r requirement.txt(windows user only)</li>
+<li>type the command pip install -r requirement.txt(windows users only)</li>
 <li>type the command python main.py </li>
