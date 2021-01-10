@@ -43,14 +43,15 @@ The prepared experimental dataset is split into two parts as training(80%) and t
 Since the model is based on classification problem and predicts a discrete output of Activity Recognition(Working at Computer,Standing Up, Walking and Going up\down stairs, Standing, Walking, Going Up\Down Stairs, Walking and Talking with Someone, Talking while Standing), we have used classification algorithms namely Decision Tree, Gaussian Naïve Bayes and K-Nearest Neighbours (KNN) algorithm to build our initial model. 
 
 ### Initial Model Accuracy
-MODELNAME	          ACCURACY
+<b>MODELNAME	          ACCURACY</b>
+<li>
 DecisionTree-train	0.956270
 DecisionTree-test	  0.658319
 KNN-train(5)        0.790427
 KNN-test(5)         0.724527
 NB-train	          0.433865
 NB-test	            0.433233
-
+</li>
 It is clearly observed in case of decision tree the model works good in the training data but gives inadequate output in the testing set. The Naive Bayes model fails to produce proper output.  
 K-Nearest Neighbour algorithm with k value as 5 gives the best output among the used models.
 
@@ -58,7 +59,7 @@ K-Nearest Neighbour algorithm with k value as 5 gives the best output among the 
 In the dataset it is observed that in the 'label' column there are repetative classes like,
 2: "Standing Up, Walking and Going up\down stairs" is a merged class of 3,4 and 5. 
 We have checked the value counts for each classes and decided to delete the lower count classes i.e., 5,2 and 6.
-
+<li>
 1    608667
 7    593563
 4    357064
@@ -66,6 +67,7 @@ We have checked the value counts for each classes and decided to delete the lowe
 5     51498
 2     47878
 6     47770
+</li>
 Name: 4, dtype: int64
 Now, The selected classifier, the KNN model is used and the range for the value of K is taken from 15 to 50 to select the best value of K.
 Although the training and testing accuracy was promising (in most cases, training : 82%, testing : 80%) but the Error Rate was fluctuating from K value 29 to 50.
@@ -84,7 +86,8 @@ algorithm gave way to the most precise model. After applying a few algorithms on
 </b>
 
 ## Instructions
+<li>
 Go to the root folder and open a command terminal
 type the command pip install -r requirement.txt
 type the command python main.py 
-
+</li>
