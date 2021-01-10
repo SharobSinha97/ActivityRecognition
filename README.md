@@ -1,8 +1,8 @@
-## Title:Activity Recognition from a Single Chest-Mounted Accelerometer
+## Activity Recognition from a Single Chest-Mounted Accelerometer
 
 ## Objective
-1. Create a Machine Learning model that can accept raw values from a 3 DoF sensor 
-2. Classify up to 5 different activities based on the raw data. 
+1. Create a Supervised Learning Machine Learning model that can accept raw values from a 3 DoF sensor 
+2. Classify up to 5 different(classes) activities based on the raw data. 
 3. Make sure to include a readme file justifying the various steps being performed as well as why the ML model you’re using was selected. (The readme file is mandatory for submissions to be considered.) 
 4. Submissions are to be made in the form of a GitHub repo with a requirements.txt file included. 
 
@@ -82,3 +82,9 @@ algorithm gave way to the most precise model. After applying a few algorithms on
   <li>Training Accuracy: 0.817491</li>
   <li>Testing Accuracy: 0.809497</li> 
 </b>
+
+## Instructions
+Go to the root folder and open a command terminal
+type the command pip install -r requirement.txt
+type the command python main.py 
+
