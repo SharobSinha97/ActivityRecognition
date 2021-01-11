@@ -44,12 +44,12 @@ Since the model is based on classification problem and predicts a discrete outpu
 
 ### Initial Model Accuracy
 <b>MODELNAME	          ACCURACY</b>
-<li>DecisionTree-train	0.956270</li>
-<li>DecisionTree-test	  0.658319</li>
-<li>KNN-train(5)        0.790427</li>
-<li>KNN-test(5)         0.724527<l/i>
-<li>NB-train	          0.433865</li>
-<li>NB-test	            0.433233</li>
+<li>DecisionTree-train:	0.956270</li>
+<li>DecisionTree-test:	  0.658319</li>
+<li>KNN-train(5):        0.790427</li>
+<li>KNN-test(5):         0.724527<l/i>
+<li>NB-train:	          0.433865</li>
+<li>NB-test:	            0.433233</li>
 It is clearly observed in case of decision tree the model works good in the training data but gives inadequate output in the testing set. The Naive Bayes model fails to produce proper output.  
 K-Nearest Neighbour algorithm with k value as 5 gives the best output among the used models.
 
@@ -57,20 +57,20 @@ K-Nearest Neighbour algorithm with k value as 5 gives the best output among the 
 In the dataset it is observed that in the 'label' column there are repetative classes like,
 2: "Standing Up, Walking and Going up\down stairs" is a merged class of 3,4 and 5. 
 We have checked the value counts for each classes and decided to delete the lower count classes i.e., 5,2 and 6.
-<li>1    608667</li>
-<li>7    593563</li>
-<li>4    357064</li>
-<li>3    216737</li>
-<li>5     51498</li>
-<li>2     47878</li>
-<li>6     47770</li>
+<li>1:    608667</li>
+<li>7:    593563</li>
+<li>4:    357064</li>
+<li>3:    216737</li>
+<li>5:     51498</li>
+<li>2:     47878</li>
+<li>6:     47770</li>
 Name: 4, dtype: int64
 Now, The selected classifier, the KNN model is used and the range for the value of K is taken from 15 to 50 to select the best value of K.
 Although the training and testing accuracy was promising (in most cases, training : 82%, testing : 80%) but the Error Rate was fluctuating from K value 29 to 50.
 So, we decided to add another feature column containing the average of x acceleration, y acceleration and z acceleration for each rows.
 
-After this, we fit our data to the selected KNN model ranging the value of K from 5 to 50, with intervals of 2 which resulted a smooth Error Graph and a promising training and testing accuracy.
-We finally decided to select the value of K as 29 for our final model, since the values after that subtly starts to fluctuate. The final model gives accuracy as training data: 0.817491, testing:	0.809497 which increased by 5% from the last model(where all the label classes were included) and an error rate of 0.19053. This model is saved as a pickle file in the "models" folder as <b>"final_model.sav"</b> is the required machine learning model.
+After this, we fit our data to the selected KNN model ranging the value of K from 5 to 50, with intervals of 2 which resulted a smooth Error Graph and a promising training and testing accuracy. 
+We finally decided to select the value of K as 29 for our final model, since the values after that subtly starts to fluctuate. The final model gives accuracy as training data: 0.817491, testing:	0.809497 which increased by 5% from the last model(where all the label classes were included) and an error rate of 0.19053. Our final model can predict 4 acitivities (Working at Computer, Standing, Walking and Talking while Standing). This model is saved as a pickle file in the "models" folder as <b>"final_model.sav"</b> is the required machine learning model.
 
 ## Conclusion
 This project was aimed at designing a model which would predict the 5 different activities based on the raw data. For developing this model, we applied data cleaning
