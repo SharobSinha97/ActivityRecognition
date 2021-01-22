@@ -1,7 +1,7 @@
 ## Activity Recognition from a Single Chest-Mounted Accelerometer
 
 ## Objective
-1. Create a Supervised Learning ML model that can accept raw values from a 3 DoF sensor 
+1. Create a Supervised Learning ML model that can accept raw values from a 3 (pitch, yaw, roll) DoF sensor 
 2. Classify up to 5 different(classes) activities based on the raw data. 
 3. Make sure to include a readme file justifying the various steps being performed as well as why the ML model you’re using was selected. (The readme file is mandatory for submissions to be considered.) 
 4. Submissions are to be made in the form of a GitHub repo with a requirements.txt file included. 
